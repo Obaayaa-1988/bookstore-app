@@ -1,38 +1,193 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Assistant:wght@200&family=Corinthia:wght@700&family=Cormorant+Garamond:wght@300&family=Kalam:wght@300&family=Oswald:wght@200&family=Poppins&family=Tajawal:wght@200;300;400&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  font-family: "Oswald";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a{
+  font-weight: bolder;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* styling for navbar component*/
+.nav-bar{
+  height: 7rem;
+  background-color: white;
+  /* box-shadow: 5px 5px 15px rgba(141, 140, 140, 0.9); */
+}
+
+.brand-flex{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 3rem;
+}
+
+.brand-flex h2{
+  margin-top: 1rem;
+  color: rgb(228, 114, 137);
+  font-family: "Oswald";
+  font-weight: bolder;
+
+  
+}
+
+
+
+.nav-links{
+  margin-left: 15rem;
+  font-family: 'Oswald';
+  font-weight: bold;
+}
+
+.header-social{
+  font-size: 3rem;
+  color: rgb(228, 114, 137);;
+}
+
+ .register-btn{
+  padding: 0.7rem 3rem;
+  background-color: rgb(228, 114, 137);
+  outline: none;
+  border: none;
+  border-radius: 1rem;
   color: white;
+  margin-right: 4rem;
+  font-family: "Oswald";
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.search-width{
+  width: 50%;
+  
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* styling the showcase */
+.text{
+  text-align: center;
+  padding-top: 10rem;
+  font-weight: bolder;
+}
+
+
+
+.light-background{
+  background-color: rgba(229, 156, 171, 0.3);
+  padding-top: 6rem;
+  width: 100%;
+  height: 130vh;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove{
+  from {background-color: rgba(159, 86, 153, 0.3);}
+  to {background-color: rgba(108, 29, 126, 0.3);}
+}
+
+.home-card{
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(175, 174, 174, 0.9);
+}
+
+.card-image img{
+  width: 30rem;
+  height: 35rem ;
+  object-fit: cover;
+  object-position: 50% 50%;
+  
+
+}
+
+/* styling book component*/
+
+.book-card{
+   min-height: 100vh;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(175, 174, 174, 0.9);
+  
+}
+
+
+.contain{
+  width: 80%;
+   margin: 1rem auto; 
+}
+
+.form-outline{
+  outline: none;
+  border: 1px solid black;
+}
+
+Button .btn-primary{
+  background-color: blueviolet;
+}
+
+.book-card h2{
+  text-align: center;
+  color:rgb(228, 114, 137); 
+  padding-top: 3rem;
+}
+
+/** styling the Login*/
+.book-cards{
+  height: 60vh;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(175, 174, 174, 0.9);
+
+}
+
+.book-cards h3{
+  text-align: center;
+  color:rgb(228, 114, 137); 
+  padding-top: 3rem;
+
+}
+.form-image2{
+  margin-left: -1.53rem;
+  height: 60vh;
+  background-color: white;
+  box-shadow: 5px 5px 15px rgba(175, 174, 174, 0.9);
+
+}
+
+/*styling the signup */
+
+ .form-image{
+  margin-left: -1.53rem;
+  height: 60vh;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(175, 174, 174, 0.9);
+
+} 
+
+
+/*styling the category component*/
+.cate-flex{
+  font-family: 'Oswald';
+  display: flex;
+  justify-content: space-between;
+}
+
+.cate-flex h3{
+  font-weight: bolder;
+  
+}
+
+.cate-flex h4{
+  font-weight: bolder;
+  
+}
+
+.card-footer{
+  background-color: blueviolet;
 }
