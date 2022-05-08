@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Card, Form, FormControl, Button } from 'react-bootstrap';
 import Image from '../images/image1.jpg';
 import Categories from './categories';
+import Popular from './popular';
 
 
 export default function Home() {
@@ -37,6 +38,8 @@ export default function Home() {
             </div>
 
             <Categories />
+
+            <Popular />
 
 
 

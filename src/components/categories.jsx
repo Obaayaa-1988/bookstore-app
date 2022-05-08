@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col, Card, CardGroup } from 'react-bootstrap';
+import { Container, Row, Col, Card, } from 'react-bootstrap';
 import Image from '../images/image1.jpg';
 
 
@@ -9,69 +9,89 @@ export default function Categories() {
         <div>
             <div className='light-background'>
                 <Container>
+                    <div className='cate-flex'>
+                        <div><h5> Popular Categories</h5></div>
+                        <div><h6>View All</h6></div>
+                    </div>
                     <Row>
                         <Col>
-                            <div className='cate-flex'>
-                                <div><h3>Categories</h3></div>
-                                <div><h4>View All</h4></div>
-                            </div>
+                            <Card border="primary" style={{ width: '12rem' }}>
+                                {/* <Card.Header>Header</Card.Header> */}
+                                <Card.Body>
+                                    <Card.Title className='text-center pt-4'>ARTS</Card.Title>
+                                    <Card.Text>
+                                        <div className='card-social'>
+                                            <i class="fa fa-paint-brush"></i>
+                                        </div>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
 
-                            <CardGroup className=' mt-5'>
-                                <Card>
-                                    <Card.Img variant="top" src={Image} />
-                                    <Card.Body>
-                                        <Card.Title className='text-center mt-2'><h2>Arts</h2></Card.Title>
-                                    </Card.Body>
-                                    <Card.Footer>
-                                        <small className="">Last updated 3 mins ago</small>
-                                    </Card.Footer>
-                                </Card>
-                                <Card>
-                                    <Card.Img variant="top" src={Image} />
-                                    <Card.Body>
-                                        <Card.Title>Adventure</Card.Title>
+                        <Col>
+                            <Card border="success" style={{ width: '12rem' }}>
 
-                                    </Card.Body>
-                                    <Card.Footer>
-                                        <small className="text-muted">Last updated 3 mins ago</small>
-                                    </Card.Footer>
-                                </Card>
-                                <Card>
-                                    <Card.Img variant="top" src={Image} />
-                                    <Card.Body>
-                                        <Card.Title>Card title</Card.Title>
-                                        <Card.Text>
-                                            This is a wider card with supporting text below as a natural lead-in to
-                                            additional content. This card has even longer content than the first to
-                                            show that equal height action.
-                                        </Card.Text>
-                                    </Card.Body>
-                                    <Card.Footer>
-                                        <small className="text-muted">Last updated 3 mins ago</small>
-                                    </Card.Footer>
-                                </Card>
-                            </CardGroup>
+                                <Card.Body>
+                                    <Card.Title className='text-center pt-4'>ROMANCE</Card.Title>
+                                    <Card.Text>
+                                        <div className='card-social'>
+                                            <i class="fa fa-heartbeat"></i>
+                                        </div>
 
-
-
-
-
-
-
-
-
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
 
                         </Col>
+
+                        <Col>
+                            <Card border="danger bold" style={{ width: '12rem' }}>
+
+                                <Card.Body>
+                                    <Card.Title className='text-center pt-4'>THRILLER</Card.Title>
+                                    <Card.Text>
+                                        <div className='card-social'>
+                                            <i class="fa fa-bug"></i>
+                                        </div>
+
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
+                        <Col>
+                            <Card border="warning" style={{ width: '12rem' }}>
+
+                                <Card.Body>
+                                    <Card.Title className='text-center pt-4'>FINANCE</Card.Title>
+                                    <Card.Text>
+                                        <div className='card-social'>
+                                            <i class="fa fa-money"></i>
+                                        </div>
+
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        </Col>
+
+                        <Col>
+                        <Card border="dark" style={{ width: '12rem' }}>
+
+                                <Card.Body>
+                                    <Card.Title className='text-center pt-4'>SCIENCE</Card.Title>
+                                    <Card.Text>
+                                        <div className='card-social'>
+                                            <i class="fa fa-flask"></i>
+                                        </div>
+
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
+                        
+                            
+                        </Col>
                     </Row>
-
-
-
                 </Container>
-
-
-
-
-
 
             </div>
 
