@@ -28,7 +28,7 @@ export default function SignBook() {
                                             <Form.Control type="password" placeholder=" Confirm Password" />
                                         </Form.Group>
 
-                                        <Button as="input" type="submit" value="Submit" className="btn2" />{' '}
+                                        <Button variant='danger' as="input" type="submit" value="Submit" className="btn2" />{' '}
 
                                     </div>
                                 </Form>
@@ -39,17 +39,17 @@ export default function SignBook() {
 
                         <Col>
 
-                            <Card className="bg-light form-image">
-                                <Card.Img src= {Image} alt="Card image" />
+                            <Card className="bg-light " style={{height: "100%" , marginLeft:"-2rem"}} >
+                                <Card.Img src= {Image} style={{height: "100%", objectFit: "cover", objectPosition: "50% 50%", boxShadow:"5px 5px 15px rgba(141, 140, 140, 0.9)"}} alt="Card image" />
                                 
                             </Card>
 
                         </Col>
                     </Row>
                 </Container>
-
-
+                <h1>hellooooo</h1>
             </div>
+           
 
 
         </div>

@@ -31,10 +31,19 @@ export default function Book() {
                                             <Form.Control type="password" />
                                         </Form.Group>
 
+                                        <Form.Group className="mb-3" controlId="formGroupPassword">
+                                            <Form.Label> Book Discription</Form.Label>
+                                            <Form.Control type="text" />
+                                        </Form.Group>
+                                        <Form.Group className="mb-3" controlId="formGroupPassword">
+                                            <Form.Label> Book Url</Form.Label>
+                                            <Form.Control type="text" />
+                                        </Form.Group>
+
                                         <Form.Group controlId="formFile" className="mb-3">
                                             <Form.Control type="file" />
                                         </Form.Group>
-                                        <Button as="input" type="submit" value="Submit" />{' '}
+                                        <Button variant='dark' as="input" type="submit" value="Submit" />{' '}
 
                                       </div>
                                     </Form>

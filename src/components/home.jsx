@@ -12,7 +12,7 @@ export default function Home() {
                 <Container>
                     <Row>
                         <Col>
-                            <Card className=" text-dark home-card">
+                            <Card className=" text-dark home-card" style={{borderRadius:"50px"}}>
                                 <Card.Img src={Image} alt="Card image" />
 
                                 <Card.ImgOverlay>
@@ -21,10 +21,7 @@ export default function Home() {
                                         
                                     </Card.Text>
 
-                                    <Form className="d-flex">
-                                            <FormControl type="search"placeholder="Search....." className="me-2"aria-label="Search"/>
-                                            <Button variant="danger">Search</Button>
-                                        </Form>
+                                    
                                 </Card.ImgOverlay>
                             </Card>
 

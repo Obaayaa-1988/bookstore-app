@@ -39,7 +39,7 @@ a{
 
 
 .nav-links{
-  margin-left: 15rem;
+  margin-left: 10rem;
   font-family: 'Oswald';
   font-weight: bold;
 }
@@ -92,7 +92,6 @@ a{
 
 .home-card{
   background-color: white;
-  border-radius: 20px;
   box-shadow: 5px 5px 15px rgba(175, 174, 174, 0.9);
 }
 

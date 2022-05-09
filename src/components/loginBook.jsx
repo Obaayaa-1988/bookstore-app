@@ -25,7 +25,7 @@ export default function LoginBook() {
                                             <Form.Control type="password" placeholder=" Confirm Password" />
                                         </Form.Group>
 
-                                        <Button as="input" type="submit" value="Submit" className="btn2" />{' '}
+                                        <Button variant="danger" as="input" type="submit" value="Submit" className="btn2" />
 
                                     </div>
                                 </Form>
@@ -36,14 +36,16 @@ export default function LoginBook() {
 
                         <Col>
 
-                            <Card className="bg-light form-image2">
-                                <Card.Img src= {Image} alt="Card image" />
+                            <Card className="bg-light" style={{height: "100%" , marginLeft:"-2rem"}}>
+                                <Card.Img src= {Image} alt="Card image" style={{height: "100%", objectFit: "cover", objectPosition: "50% 50%", boxShadow:"5px 5px 15px rgba(141, 140, 140, 0.9)"}}  />
                                 
                             </Card>
 
                         </Col>
                     </Row>
                 </Container>
+
+                <h1>hellooooooo</h1>
 
 
             </div>
