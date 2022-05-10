@@ -1,5 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { NavLink} from 'react-router-dom'
+
 import Image from '../images/image1.jpg';
 
 export default function SignBook() {
@@ -27,8 +29,10 @@ export default function SignBook() {
                                         <Form.Group className="mb-3" controlId="formGroupPassword">
                                             <Form.Control type="password" placeholder=" Confirm Password" />
                                         </Form.Group>
+                                        <p> Already Have An Account? <NavLink to="/loginBook">LogIn</NavLink></p>
 
-                                        <Button variant='danger' as="input" type="submit" value="Submit" className="btn2" />{' '}
+
+                                        <Button style={{backgroundColor:"rgb(226, 113, 136)", border:"none"}} as="input" type="submit" value="Register" className="btn2" />{' '}
 
                                     </div>
                                 </Form>

@@ -138,7 +138,7 @@ Button .btn-primary{
 
 /** styling the Login*/
 .book-cards{
-  height: 60vh;
+  height: 70vh;
   background-color: white;
   border-radius: 20px;
   box-shadow: 5px 5px 15px rgba(175, 174, 174, 0.9);

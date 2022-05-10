@@ -43,7 +43,7 @@ export default function Book() {
                                         <Form.Group controlId="formFile" className="mb-3">
                                             <Form.Control type="file" />
                                         </Form.Group>
-                                        <Button variant='dark' as="input" type="submit" value="Submit" />{' '}
+                                        <Button style={{backgroundColor:"rgb(226, 113, 136)", border:"none"}} as="input" type="submit" value="Submit" />
 
                                       </div>
                                     </Form>
