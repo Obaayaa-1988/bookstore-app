@@ -26,7 +26,7 @@ export default function Header() {
               <Nav.Link href="/book"> Add A Book</Nav.Link>
               <Nav.Link href="/signBook"> SignUp</Nav.Link>
               <Nav.Link href="/loginBook"> LogIn</Nav.Link>
-              {/* <Nav.Link href="/categories">Categories</Nav.Link> */}
+              <Nav.Link href="/book-club">Join Book Club</Nav.Link>
             </Nav>
             <Form className="d-flex form-search">
               <FormControl type="search" placeholder="Search" className="me-2" aria-label="Search" />
@@ -35,7 +35,7 @@ export default function Header() {
             </Form>
 
             <div>
-            <Button variant="danger" style={{}} >LogOut</Button>
+            <Button  style={{ backgroundColor:"blueviolet", border:"none"}} >LogOut</Button>
 
             </div>
 

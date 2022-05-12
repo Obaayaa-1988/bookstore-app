@@ -1,6 +1,8 @@
 import React from 'react';
 import { Container, Row, Col, Card, Form,  Button } from 'react-bootstrap';
+// import Footer from './components/footer';
 
+ 
 
 export default function Book() {
     return (
@@ -36,7 +38,7 @@ export default function Book() {
                                             <Form.Control type="text" />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupPassword">
-                                            <Form.Label> Book Url</Form.Label>
+                                            <Form.Label> Price Of Book</Form.Label>
                                             <Form.Control type="text" />
                                         </Form.Group>
 
@@ -52,7 +54,6 @@ export default function Book() {
                         </Col>
                     </Row>
                 </Container>
-
 
 
             </div>

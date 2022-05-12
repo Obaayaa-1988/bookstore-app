@@ -32,7 +32,7 @@ export default function SignBook() {
                                         <p> Already Have An Account? <NavLink to="/loginBook">LogIn</NavLink></p>
 
 
-                                        <Button style={{backgroundColor:"rgb(226, 113, 136)", border:"none"}} as="input" type="submit" value="Register" className="btn2" />{' '}
+                                        <Button style={{backgroundColor:"blueviolet", border:"none"}} as="input" type="submit" value="Register" className="btn2" />{' '}
 
                                     </div>
                                 </Form>
@@ -51,7 +51,7 @@ export default function SignBook() {
                         </Col>
                     </Row>
                 </Container>
-                <h1>hellooooo</h1>
+                
             </div>
            
 

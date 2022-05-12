@@ -6,6 +6,7 @@ import Book from './components/book';
 import SignBook from './components/signBook';
 import LoginBook from './components/loginBook';
 import Categories from './components/categories';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
       </Routes>
 
 
-
+      <Footer />
       </Router>
       
       

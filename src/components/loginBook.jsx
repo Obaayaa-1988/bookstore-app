@@ -28,7 +28,7 @@ export default function LoginBook() {
                                         </Form.Group>
                                         <p className='book-link'> Don't have an account? <NavLink to="/signBook">SignUp</NavLink></p>
 
-                                        <Button style={{backgroundColor:"rgb(226, 113, 136)", border:"none"}} as="input" type="submit" value="LogIn" className="btn2" />
+                                        <Button style={{backgroundColor:"blueviolet", border:"none"}} as="input" type="submit" value="LogIn" className="btn2" />
 
                                     </div>
                                 </Form>
@@ -48,7 +48,7 @@ export default function LoginBook() {
                     </Row>
                 </Container>
 
-                <h1>hellooooooo</h1>
+                
 
 
             </div>
