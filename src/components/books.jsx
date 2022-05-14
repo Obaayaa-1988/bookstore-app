@@ -4,7 +4,7 @@ import { Container, Row, Col, Card, Form,  Button } from 'react-bootstrap';
 
  
 
-export default function Book() {
+export default function Books() {
     return (
         <div>
             <div className='light-background'>
