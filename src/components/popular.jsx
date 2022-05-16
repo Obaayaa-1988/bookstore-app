@@ -1,104 +1,74 @@
 import React from 'react'
+import { getBooks } from '../bookData';
+import { getBook } from '../bookData';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, } from 'react-bootstrap';
-import Image1 from '../images/book1.jpg';
-import Image2 from '../images/book2.jpg';
-import Image3 from '../images/cover1.jpg';
-import Image4 from '../images/book5.jpg';
 
 
-
-
-
+import { useParams } from 'react-router-dom';
 export default function Popular() {
+
+    let params = useParams();
+    let book = getBook(parseInt(params.popularId, 10));
+    let books = getBooks()
+
+    let filteredBook = [];
+    const bookFiltered = () => {
+        filteredBook = books.filter((item) => item.number !== book.number)
+    }
+
+    bookFiltered()
     return (
         <div>
-            <div className='light-background'>
+            <div className='light-background3'>
                 <Container>
-                    <div className='cate-flex'>
-                        <div><h5> Popular Books</h5></div>
-                        <div><h6>View All</h6></div>
-                    </div>
-                    <Row>
-                        
-
-                        <Col>
+                    <Row >
+                        <Col >
                             <Card style={{ width: '16rem' }}>
-                                <Card.Img variant="top" src={Image1} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                <Card.Img variant="top" src={book.image} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
                                 <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                        Some quick 
-                                    </Card.Text>
-                                </Card.Body>
-                                
-                                <Card.Body>
-                                    <Card.Link href="#">Card Link</Card.Link>
-                                    
+                                    <Card.Text className='text-title'><p>Uploaded By:</p> {book.upload}</Card.Text>
+                                    <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text>
+                                    <Card.Text className='text-title' ><p>Title Of Book:</p>{book.title} </Card.Text>
+                                    <Card.Text className='text-title'><button className='btnn'>Buy</button><h3>{book.price}</h3></Card.Text>
                                 </Card.Body>
                             </Card>
-
                         </Col>
-
-                        <Col>
-                            <Card style={{ width: '16rem' }}>
-                                <Card.Img variant="top" src={Image2} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                        Some quick 
-                                    </Card.Text>
-                                </Card.Body>
-                                
-                                <Card.Body>
-                                    <Card.Link href="#">Card Link</Card.Link>
-                                    
-                                </Card.Body>
-                            </Card>
-
-                        </Col>
-
-                        <Col>
-                            <Card style={{ width: '16rem' }}>
-                                <Card.Img variant="top" src={Image3} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                        Some quick 
-                                    </Card.Text>
-                                </Card.Body>
-                                
-                                <Card.Body>
-                                    <Card.Link href="#">Card Link</Card.Link>
-                                    
-                                </Card.Body>
-                            </Card>
-
-                        </Col>
-
-                        <Col>
-                            <Card style={{ width: '16rem' }}>
-                                <Card.Img variant="top" src={Image4} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
-                                <Card.Body>
-                                    <Card.Title>Card Title</Card.Title>
-                                    <Card.Text>
-                                        Some quick 
-                                    </Card.Text>
-                                </Card.Body>
-                                
-                                <Card.Body>
-                                    <Card.Link href="#">Card Link</Card.Link>
-                                    
-                                </Card.Body>
-                            </Card>
-
-                        </Col>
-
-                        
-
-
-
                     </Row>
                 </Container>
+
+                <Container>
+                    <Row xs={12} md={4}>
+                        { filteredBook.map((list) => (
+                            <Link to={`/Populars/${list.number}`} key={list.number} className="links">
+                            <Col  >
+                        <Card style={{ width: '16rem' }}>
+                            <Card.Img variant="top" src={book.image} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                            <Card.Body>
+                                <Card.Text className='text-title'><p>Uploaded By:</p> {book.upload}</Card.Text>
+                                <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 
+                                <Card.Text className='text-title' ><p>Title Of Book:</p>{book.title} </Card.Text>
+                                <Card.Text className='text-title'><button className='btnn'>Buy</button><h3>{book.price}</h3></Card.Text>      
+                            </Card.Body>
+                        </Card>
+                    </Col>
+              </Link>
+
+
+                        ))
+
+                        }
+                        
+                    </Row>
+                </Container>
+
+
+
+
+
+
+
+
 
             </div>
 

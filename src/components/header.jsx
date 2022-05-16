@@ -23,7 +23,7 @@ export default function Header() {
             <Nav className="me-auto my-2 my-lg-0 nav-links" style={{ maxHeight: '100px' }} navbarScroll >
               <Nav.Link href="/"
                 style={{ fontWeight: "bolder" }}>Home</Nav.Link>
-              <Nav.Link href="/book"> Add A Book</Nav.Link>
+              <Nav.Link href="/books"> Add A Book</Nav.Link>
               <Nav.Link href="/signBook"> SignUp</Nav.Link>
               <Nav.Link href="/loginBook"> LogIn</Nav.Link>
               <Nav.Link href="/book-club">Join Book Club</Nav.Link>

@@ -206,7 +206,11 @@ Button .btn-primary{
 
 /* styling the footer*/
 .book-footer{
-  background-color: rgb(118, 64, 138);
+  /* background-color: rgb(118, 64, 138); */
+  background: #009FFF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   height: 6rem;
   width: 100%;
   color: white;
@@ -219,4 +223,39 @@ Button .btn-primary{
 
   
 }
+/*styling popular books*/
 
+.light-background3{
+  background-color: rgba(229, 156, 171, 0.3);
+  padding-top: 6rem;
+  width: 100%;
+  padding-bottom: 5rem;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove{
+  from {background-color: rgba(89, 40, 187, 0.3);}
+  to {background-color: rgba(99, 23, 116, 0.3);}
+}
+
+
+.links{
+  text-decoration: none;
+  color: black;
+  font-family: "Oswald";
+}
+
+.text-title{
+  display: flex;
+  gap: 20px;
+}
+
+.btnn{
+  padding: 0.4rem 1.5rem;
+  outline: none;
+  background-color: blueviolet ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  
+}

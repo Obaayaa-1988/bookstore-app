@@ -7,7 +7,7 @@ import Image from '../images/image1.jpg';
 export default function SignBook() {
     return (
         <div>
-            <div className='light-background'>
+            <div className='light-background3'>
 
                 <Container>
                     <Row>

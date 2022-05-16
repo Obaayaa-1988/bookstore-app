@@ -7,6 +7,8 @@ import SignBook from './components/signBook';
 import LoginBook from './components/loginBook';
 import Categories from './components/categories';
 import Footer from './components/footer';
+import Populars from './components/populars';
+import Popular from './components/popular';
 
 function App() {
   return (
@@ -19,6 +21,10 @@ function App() {
         <Route path="/signBook" element={<SignBook />} />
         <Route path="/loginBook" element={<LoginBook />} />
         <Route path="/categories" element={<Categories />} />
+        <Route path="/populars" element={<Populars />} />
+        <Route path="/populars/:popularId" element={<Popular />} />
+
+
 
 
       </Routes>

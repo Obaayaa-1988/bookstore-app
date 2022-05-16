@@ -1,8 +1,8 @@
 import React from 'react'
-import { Container, Row, Col, Card, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card} from 'react-bootstrap';
 import Image from '../images/image1.jpg';
 import Categories from './categories';
-import Popular from './popular';
+import Popular from './populars';
 
 
 export default function Home() {
