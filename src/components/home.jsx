@@ -12,7 +12,7 @@ export default function Home() {
                 <Container>
                     <Row>
                         <Col>
-                            <Card className=" text-dark home-card" style={{borderRadius:"50px"}}>
+                            <Card className=" text-dark home-card">
                                 <Card.Img src={Image} alt="Card image" />
 
                                 <Card.ImgOverlay>

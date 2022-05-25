@@ -1,40 +1,45 @@
 const books = [
     {
         "number": 1,
-        "image":"../img/book1.jpg",
+        "username":"Bella",
+        "bookImg":"../img/book1.jpg",
         "title":"All my life",
         "author":"Ashbella",
         "upload": "Bella", 
-        'price': "$10"
+        'price': "$10",
+        "description":"how love happens overnight"
         
     }, 
 
     {
         "number": 2,
-        "image":"../img/book2.jpg",
+        "username": "Ash",
+        "bookImg":"../img/book2.jpg",
         "title":"All my life",
         "author":"Ashbella",
-        "upload": "Ash", 
-        'price': "$10"
+        'price': "$10",
+        "description":"how love happens overnight"
         
     },
 
     {
         "number": 3,
-        "image":"../img/book4.jpg",
+        "username":"Ella",
+        "bookImg":"../img/book4.jpg",
         "title":"All my life",
-        "author":"Ashbella",
-        "upload": "Ella", 
-        'price': "$10"
+        "author":"Ashbella", 
+        'price': "$10",
+        "description":"how love happens overnight"
     },
 
     {
         "number": 4,
-        "image":"../img/cover1.jpg",
+        "username":"Alla",
+        "bookImg":"../img/cover1.jpg",
         "title":"All my life",
         "author":"Ashbella",
-        "upload": "Alla", 
-        'price': "$10"
+        'price': "$10",
+        "description":"how love happens overnight"
     },
 ]
 
