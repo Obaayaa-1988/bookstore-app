@@ -1,24 +1,27 @@
 import React from 'react'
-import { getBooks } from '../bookData';
-import { getBook } from '../bookData';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, } from 'react-bootstrap';
+import { getBooks } from '../bookData';
+import { getBook } from '../bookData';
 import { useParams } from 'react-router-dom';
+
+
 export default function Popular() {
+
 
     let params = useParams();
     let book = getBook(parseInt(params.popularId, 10));
-    let books = getBooks()
+    let books = getBooks();
 
     let filteredBook = [];
 
     const bookFiltered = () => {
-        filteredBook = books.filter((item) => item.number !== book.number)
+        filteredBook = books.filter((item) => item.number !== book.number )
+        console.log(filteredBook)
     }
 
-   console.log(filteredBook)
-    bookFiltered()
-    console.log(bookFiltered())
+    bookFiltered();
+    // console.log(bookFiltered)
 
     return (
         <div>
