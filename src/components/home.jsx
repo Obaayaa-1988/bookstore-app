@@ -30,18 +30,11 @@ export default function Home() {
                     </Row>
                 </Container>
 
-
-
             </div>
 
             <Categories />
 
             <Popular />
-
-
-
-
-
 
         </div>
     )

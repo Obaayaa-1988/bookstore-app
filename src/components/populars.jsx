@@ -4,10 +4,12 @@ import { Container, Row, Col, Card, } from 'react-bootstrap';
 import { NavLink, Link, Outlet } from 'react-router-dom';
 import { getBooks } from '../bookData';
 
-
-
-
 export default function Populars() {
+
+
+
+
+
     let books = getBooks();
 
     return (

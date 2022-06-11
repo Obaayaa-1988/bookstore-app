@@ -1,10 +1,39 @@
 import React from 'react'
+import { useState } from 'react'
+import axios from 'axios';
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { NavLink} from 'react-router-dom'
 
 import Image from '../images/image3.jpg';
 
 export default function LoginBook() {
+
+    const [email, setEmail ] = useState("");
+    const [ password, setPassword ] = useState("");
+    const [ confirmPassword, setConfirmPassword ] = useState
+
+
+
+    const userLogin = async (e) => {
+        try {
+
+            e.preventDefault()
+            const response = await axios.get("http://localhost:8080/login", {
+                email,
+                password,
+
+            })
+            
+        } catch (error) {   
+            
+        }
+
+
+
+    }
+
+
+
     return (
         <div>
             <div className='light-background3'>
@@ -14,17 +43,17 @@ export default function LoginBook() {
                         <Col>
                             <Card className="book-cards">
                                 <h3> LOGIN</h3>
-                                <Form >
+                                <Form onSubmit={ userLogin} >
                                     <div className='contain'>
                                         <Form.Group className="mb-3" controlId="formGroupEmail">
-                                            <Form.Control type="email" placeholder="Enter email" />
+                                            <Form.Control type="email" placeholder="Enter email" value={ email} onChange={(e) => setEmail(e.target.value)} />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupPassword">
 
-                                            <Form.Control type="password" placeholder="Password" />
+                                            <Form.Control type="password" placeholder="Password" value={ password} onChange={(e) => setPassword(e.target.value)}/>
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="formGroupPassword">
-                                            <Form.Control type="password" placeholder=" Confirm Password" />
+                                            <Form.Control type="password" placeholder=" Confirm Password" value={ confirmPassword} onChange={ (e) => setConfirmPassword(e.target.value)} />
                                         </Form.Group>
                                         <p className='book-link'> Don't have an account? <NavLink to="/signBook">SignUp</NavLink></p>
 
