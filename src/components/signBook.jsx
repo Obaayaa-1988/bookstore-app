@@ -4,7 +4,7 @@ import axios from "axios"
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom'
 
-import Image from '../images/image1.jpg';
+import Image from '../images/image2.jpg';
 
 export default function SignBook() {
     const [username, setUsername] = useState("")
