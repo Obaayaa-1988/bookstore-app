@@ -30,55 +30,15 @@ export default function Books() {
         formData.append("category", category)
         formData.append("description", description)
         formData.append("price", price)
-        formData.append("image", image)
+        // formData.append("image", image)
 
        await axios.post("http://localhost:8595/api/books", formData)
             
         } catch (error) {
             
-        }
-        
+        }        
 
     }
-
-
-    // const addBook = async (e) => {
-    //     try {
-
-    //         e.preventDefault()
-    //         const formData = new FormData()
-    //         console.log("bbbbbbb",formData)
-
-    //         formData.append("image", image)
-            // formData.append("firstName", firstName)
-            // formData.append("lastName", lastName)
-            // formData.append("weight", weight)
-            // formData.append("BMI", BMI)
-            
-
-    //         const response = await axios.post("http://localhost:8595/api/books", {
-    //             formData
-    //             // username,
-    //             // author,
-    //             // title,
-    //             // price,
-    //             // category,
-    //             // description,
-    //             // bookImg
-    //         },
-    //             { withCredentials: true }
-
-    //         );
-
-    //         const { data } = response;
-    //         console.log(data)
-
-    //     } catch (error) {
-    //         console.log(error)
-
-    //     }
-    // }
-
     return (
         <div>
             <div className='light-background3'>
@@ -128,11 +88,7 @@ export default function Books() {
                         </Col>
                     </Row>
                 </Container>
-
-
             </div>
-
-
         </div>
     )
 }
