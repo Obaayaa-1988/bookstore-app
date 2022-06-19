@@ -47,6 +47,6 @@ export function getBooks(){
     return books
 }
 
-export function getBook(number){
-    return books.find((book) => book.number === number)
+export function getBook(username){
+    return books.find((book) => book.username === username)
 }

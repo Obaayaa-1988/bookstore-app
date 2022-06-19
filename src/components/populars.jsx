@@ -1,16 +1,37 @@
-import { Button } from 'bootstrap';
+
 import React from 'react'
+import { useState, useEffect } from 'react'
+import { Button } from 'bootstrap';
 import { Container, Row, Col, Card, } from 'react-bootstrap';
 import { NavLink, Link, Outlet } from 'react-router-dom';
 import { getBooks } from '../bookData';
+import axios from 'axios';
 
 export default function Populars() {
+    const [books, setBooks] =useState([])
+
+    // let books = getBooks();
+    const fetchBooks = async () => {
+        
+     const response = await axios.get("http://localhost:8595/api/all-books", 
+     
+     { withCredentials: true } 
+
+     )
 
 
+    const { data } = response;
+          console.log( data)
+          setBooks(data.response)  
 
+       // setBooks(data.response.books)
+        
+    }
 
+    useEffect(() => {
+        fetchBooks()
+    }, [])
 
-    let books = getBooks();
 
     return (
         <div>
@@ -21,11 +42,11 @@ export default function Populars() {
                         <div><h6>View All</h6></div>
                     </div>
                     <Row xs={12} md={4}>
-                        {books.map((book) => (
-                            <Link to={`/Populars/${book.number}`} key={book.number} className="links">
+                        { books.map((book) => (
+                            <Link to={`/Populars/${book.username}`} key={book.username} className="links">
                                 <Col  >
                             <Card style={{ width: '16rem' }}>
-                                <Card.Img variant="top" src={book.bookImg} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                <Card.Img variant="top" src={book.image} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
                                 <Card.Body>
                                     <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
                                     <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 
@@ -34,7 +55,7 @@ export default function Populars() {
                                 </Card.Body>
                             </Card>
                         </Col>
-                  </Link>))}            
+                  </Link>))  }            
                     </Row>
                     <Outlet />
                 </Container>
