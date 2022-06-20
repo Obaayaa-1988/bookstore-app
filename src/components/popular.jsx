@@ -48,7 +48,7 @@ export default function Popular() {
                             <Link to={`/Populars/${list.number}`} key={list.number} className="links">
                             <Col  >
                         <Card style={{ width: '16rem' }}>
-                            <Card.Img variant="top" src={book.bookImg} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                            <Card.Img variant="top" src={book.image} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
                             <Card.Body>
                                 <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
                                 <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 

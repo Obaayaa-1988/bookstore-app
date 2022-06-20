@@ -9,6 +9,7 @@ import Categories from './components/categories';
 import Footer from './components/footer';
 import Populars from './components/populars';
 import Popular from './components/popular';
+import Allbooks from './components/allbooks';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/signBook" element={<SignBook />} />
         <Route path="/loginBook" element={<LoginBook />} />
         <Route path="/categories" element={<Categories />} />
+        <Route path="/allbooks" element={<Allbooks />} />
         <Route path="/populars" element={<Populars />} />
         <Route path="/populars/:popularId" element={<Popular />} />
 
