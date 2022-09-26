@@ -47,7 +47,7 @@ export default function Books() {
                         <Col>
                             <Card className="book-card ">
                                 <h2> ADD A BOOK</h2>
-                                <Form onSubmit={addBook} >
+                                <Form onSubmit={addBook} enctype="multipart/form-data" >
                                     <div className='contain'>
                                         <Form.Group className="mb-3 " >
                                             <Form.Label>Name</Form.Label>
@@ -66,6 +66,7 @@ export default function Books() {
                                             <Form.Label>Category Of Book</Form.Label>
                                             <Form.Control type="text"  onChange={(e) => setCategory(e.target.value)}/>
                                         </Form.Group>
+                                        
 
                                         <Form.Group className="mb-3" >
                                             <Form.Label> Book Description</Form.Label>

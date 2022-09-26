@@ -49,7 +49,7 @@ export default function Populars() {
                             <Card style={{ width: '16rem' }}>
                                 {console.log("kkkkk", book.image)}
                                 
-                                <Card.Img variant="top" src={"http://localhost:8595"+ book.image} alt='image'  className="img-fluid" style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                <Card.Img variant="top" src={`/public/uploads/${book.image}`} alt='image'  className="img-fluid" style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
                                 <Card.Body>
                                     <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
                                     <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 
