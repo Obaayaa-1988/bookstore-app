@@ -33,6 +33,8 @@ export default function Allbooks() {
         fetchBooks()
     }, [])
 
+    const imageUrl = 'http://localhost:8595/images/imagebook1.jpg'
+
 
     return (
         <div>
