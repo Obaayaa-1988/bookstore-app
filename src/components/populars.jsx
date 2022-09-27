@@ -33,6 +33,16 @@ export default function Populars() {
         fetchBooks()
     }, [])
 
+    const imageUrl = 'http://localhost:8595/images/'
+    books.map(item => {
+        console.log("nanann", item.image)
+        // item.image[0]
+        
+    })
+
+    
+
+
 
     return (
         <div>
@@ -47,9 +57,10 @@ export default function Populars() {
                             <Link to={`/Populars/${book.username}`} key={book.username} className="links">
                                 <Col sm={12} md={6} lg={4} xl={3} className= "my-3 p-3">
                             <Card style={{ width: '16rem' }}>
+
                                 {console.log("kkkkk", book.image)}
                                 
-                                <Card.Img variant="top" src={`/public/uploads/${book.image}`} alt='image'  className="img-fluid" style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                <Card.Img variant="top" src={imageUrl + book.image} crossOrigin='anonymous' alt='image'  className="img-fluid" style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
                                 <Card.Body>
                                     <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
                                     <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 

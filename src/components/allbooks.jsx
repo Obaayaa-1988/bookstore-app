@@ -33,7 +33,7 @@ export default function Allbooks() {
         fetchBooks()
     }, [])
 
-    const imageUrl = 'http://localhost:8595/images/imagebook1.jpg'
+    const imageUrl = 'http://localhost:8595/images/'
 
 
     return (
@@ -49,7 +49,7 @@ export default function Allbooks() {
                             <Link to={`/Populars/${book.username}`} key={book.username} className="links">
                                 <Col sm={12} md={6} lg={4} xl={3} className= "my-3 p-3">
                             <Card style={{ width: '16rem' }}>
-                                <Card.Img variant="top" src={book.image} alt='image' style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                <Card.Img variant="top" src={imageUrl + book.image} crossOrigin='anonymous' alt='image' style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
                                 <Card.Body>
                                     <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
                                     <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 
