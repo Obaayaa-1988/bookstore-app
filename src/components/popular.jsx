@@ -23,6 +23,8 @@ export default function Popular() {
     bookFiltered();
     // console.log(bookFiltered)
 
+    
+
     return (
         <div>
             <div className='light-background3'>
