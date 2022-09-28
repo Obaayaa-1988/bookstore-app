@@ -47,18 +47,18 @@ export default function Allbooks() {
                     <Row xs={12} md={4}>
                         {books.map((book) => (
                             <Link to={`/Populars/${book.username}`} key={book.username} className="links">
-                                <Col sm={12} md={6} lg={4} xl={3} className="my-3 p-3">
-                                    <Card style={{ width: '16rem' }}>
-                                        <Card.Img variant="top" src={imageUrl + book.image} crossOrigin="anonymous" alt='image' style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
-                                        <Card.Body>
-                                            <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
-                                            <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text>
-                                            <Card.Text className='text-title' ><p>Title Of Book:</p>{book.title} </Card.Text>
-                                            <Card.Text className='text-title'><button className='btnn'>Buy</button><h3>{book.price}</h3></Card.Text>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-                            </Link>))}
+                                <Col sm={12} md={6} lg={4} xl={3} className= "my-3 p-3">
+                            <Card style={{ width: '16rem' }}>
+                                <Card.Img variant="top" src={imageUrl + book.image} crossOrigin='anonymous' alt='image' style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                <Card.Body>
+                                    <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
+                                    <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 
+                                    <Card.Text className='text-title' ><p>Title Of Book:</p>{book.title} </Card.Text>
+                                    <Card.Text className='text-title'><button className='btnn'>Buy</button><h3>{book.price}</h3></Card.Text>      
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                  </Link>))  }            
                     </Row>
                     <Outlet />
                 </Container>

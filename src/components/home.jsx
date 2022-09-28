@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Card} from 'react-bootstrap';
-import Image from '../images/image1.jpg';
+import Image from '../images/image1.jpg'
 import Categories from './categories';
 import Popular from './populars';
 
