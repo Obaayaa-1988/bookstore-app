@@ -70,9 +70,11 @@ a{
 
 /* styling the showcase */
 .text{
+  font-size: 3rem;
   text-align: center;
   padding-top: 10rem;
   font-weight: bolder;
+
 }
 
 

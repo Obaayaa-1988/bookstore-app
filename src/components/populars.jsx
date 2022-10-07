@@ -53,7 +53,7 @@ export default function Populars() {
                         <div><h6 ><NavLink to="/allbooks">View All</NavLink></h6></div>
                     </div>
                     <Row xs={12} md={4}>    
-                        { books.slice(0,4).map((book) => (  
+                        { books.slice(0,4).reverse().map((book) => (  
                             <Link to={`/Populars/${book.username}`} key={book.username} className="links">
                                 <Col sm={12} md={6} lg={4} xl={3} className= "my-3 p-3">
                             <Card style={{ width: '16rem' }}>
