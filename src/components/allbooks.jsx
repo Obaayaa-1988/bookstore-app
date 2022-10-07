@@ -8,25 +8,25 @@ import { getBooks } from '../bookData';
 import axios from 'axios';
 
 export default function Allbooks() {
-    const [books, setBooks] =useState([])
+    const [books, setBooks] = useState([])
 
     // let books = getBooks();
     const fetchBooks = async () => {
-        
-     const response = await axios.get("http://localhost:8595/api/all-books" , 
-     
-     { withCredentials: true } 
 
-     )
+        const response = await axios.get("http://localhost:8595/api/all-books",
+
+            { withCredentials: true }
+
+        )
 
 
-    const { data } = response;
-    console.log("my books", data.books)
-          console.log( data)
-          setBooks(data)  
+        const { data } = response;
+        console.log("my books", data.books)
+        console.log(data)
+        setBooks(data)
 
-       // setBooks(data.response.books)
-        
+        // setBooks(data.response.books)
+
     }
 
     useEffect(() => {
@@ -44,8 +44,8 @@ export default function Allbooks() {
                         {/* <div><h5> Popular Books</h5></div>
                         <div><h6 >View All</h6></div> */}
                     </div>
-                    <Row xs={12} md={4}>    
-                        { books.reverse().map((book) => (  
+                    <Row xs={12} md={4}>
+                        {books.map((book) => (
                             <Link to={`/Populars/${book.username}`} key={book.username} className="links">
                                 <Col sm={12} md={6} lg={4} xl={3} className= "my-3 p-3">
                             <Card style={{ width: '16rem' }}>
