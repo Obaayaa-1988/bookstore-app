@@ -1,10 +1,10 @@
 
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { Button } from 'bootstrap';
+// import { Button } from 'bootstrap';
 import { Container, Row, Col, Card, } from 'react-bootstrap';
 import { NavLink, Link, Outlet } from 'react-router-dom';
-import { getBooks } from '../bookData';
+// import { getBooks } from '../bookData';
 import axios from 'axios';
 
 export default function Populars() {
@@ -34,11 +34,11 @@ export default function Populars() {
     }, [])
 
     const imageUrl = 'http://localhost:8595/images/'
-    books.map(item => {
-        console.log("nanann", item.image)
-        // item.image[0]
+    // books.map(item => {
+    //     console.log("nanann", item.image)
+    //     // item.image[0]
         
-    })
+    // })
 
     
 
@@ -53,12 +53,12 @@ export default function Populars() {
                         <div><h6 ><NavLink to="/allbooks">View All</NavLink></h6></div>
                     </div>
                     <Row xs={12} md={4}>    
-                        { books.slice(0,4).reverse().map((book) => (  
+                        { books.map((book) => (  
                             <Link to={`/Populars/${book.username}`} key={book.username} className="links">
                                 <Col sm={12} md={6} lg={4} xl={3} className= "my-3 p-3">
                             <Card style={{ width: '16rem' }}>
 
-                                {console.log("kkkkk", book.image)}
+                                {/* {console.log("kkkkk", book.image)} */}
                                 
                                 <Card.Img variant="top" src={imageUrl + book.image} crossOrigin='anonymous' alt='image'  className="img-fluid" style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
                                 <Card.Body>
