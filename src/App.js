@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Home from './components/home';
-import Books from './components/books';
+import AddBooks from './components/addBooks'
 import SignBook from './components/signBook';
 import LoginBook from './components/loginBook';
 import Categories from './components/categories';
@@ -15,27 +15,23 @@ function App() {
   return (
     <div>
       <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/signBook" element={<SignBook />} />
-        <Route path="/loginBook" element={<LoginBook />} />
-        <Route path="/categories" element={<Categories />} />
-        <Route path="/allbooks" element={<Allbooks />} />
-        <Route path="/populars" element={<Populars />} />
-        <Route path="/populars/:popularId" element={<Popular />} />
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/addBooks" element={<AddBooks />} />
+          <Route path="/signBook" element={<SignBook />} />
+          <Route path="/loginBook" element={<LoginBook />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/allbooks" element={<Allbooks />} />
+          <Route path="/populars" element={<Populars />} />
+          <Route path="/populars/:popularId" element={<Popular />} />
+        </Routes>
 
 
-
-
-      </Routes>
-
-
-      <Footer />
+        <Footer />
       </Router>
-      
-      
+
+
     </div>
   );
 }
