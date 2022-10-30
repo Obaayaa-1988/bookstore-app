@@ -8,25 +8,25 @@ import { NavLink, Link, Outlet } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Populars() {
-    const [books, setBooks] = useState([])
+    const [books, setBooks] =useState([])
 
     // let books = getBooks();
     const fetchBooks = async () => {
+        
+     const response = await axios.get("http://localhost:8595/api/all-books" , 
+     
+     { withCredentials: true } 
 
-        const response = await axios.get("http://localhost:8595/api/all-books",
-
-            { withCredentials: true }
-
-        )
+     )
 
 
-        const { data } = response;
-        console.log("my books", data.books)
-        console.log(data)
-        setBooks(data)
+    const { data } = response;
+    console.log("my books", data.books)
+          console.log( data)
+          setBooks(data)  
 
-        // setBooks(data.response.books)
-
+       // setBooks(data.response.books)
+        
     }
 
     useEffect(() => {
@@ -37,10 +37,10 @@ export default function Populars() {
     // books.map(item => {
     //     console.log("nanann", item.image)
     //     // item.image[0]
-
+        
     // })
 
-
+    
 
 
 
@@ -52,24 +52,24 @@ export default function Populars() {
                         <div><h5> Popular Books</h5></div>
                         <div><h6 ><NavLink to="/allbooks">View All</NavLink></h6></div>
                     </div>
-                    <Row xs={12} md={4}>
-                        {books.reverse().map((book) => (
+                    <Row xs={12} md={4}>    
+                        { books.reverse().map((book) => (  
                             <Link to={`/Populars/${book.username}`} key={book.username} className="links">
-                                <Col sm={12} md={6} lg={4} xl={3} className="my-3 p-3">
-                                    <Card style={{ width: '16rem' }}>
+                                <Col sm={12} md={6} lg={4} xl={3} className= "my-3 p-3">
+                            <Card style={{ width: '16rem' }}>
 
-                                        {/* {console.log("kkkkk", book.image)} */}
-
-                                        <Card.Img variant="top" src={imageUrl + book.image} crossOrigin='anonymous' alt='image' className="img-fluid" style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
-                                        <Card.Body>
-                                            <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
-                                            <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text>
-                                            <Card.Text className='text-title' ><p>Title Of Book:</p>{book.title} </Card.Text>
-                                            <Card.Text className='text-title'><button className='btnn'>Buy</button><h3>{book.price}</h3></Card.Text>
-                                        </Card.Body>
-                                    </Card>
-                                </Col>
-                            </Link>))}
+                                {/* {console.log("kkkkk", book.image)} */}
+                                
+                                <Card.Img variant="top" src={imageUrl + book.image} crossOrigin='anonymous' alt='image'  className="img-fluid" style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                <Card.Body>
+                                    <Card.Text className='text-title'><p>Uploaded By:</p> {book.username}</Card.Text>
+                                    <Card.Text className='text-title'><p>Name Of Author:</p>{book.author} </Card.Text> 
+                                    <Card.Text className='text-title' ><p>Title Of Book:</p>{book.title} </Card.Text>
+                                    <Card.Text className='text-title'><button className='btnn'>Buy</button><h3>{book.price}</h3></Card.Text>      
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                  </Link>))  }            
                     </Row>
                     <Outlet />
                 </Container>

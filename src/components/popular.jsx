@@ -1,23 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Container, Row, Col, Card, } from 'react-bootstrap';
 import { getBooks } from '../bookData';
 import { getBook } from '../bookData';
 import { useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 export default function Popular() {
-
-
     let params = useParams();
     let book = getBook(parseInt(params.popularId, 10));
     let books = getBooks();
 
-    let filteredBook = [];
+    let filterBook = [];
 
     const bookFiltered = () => {
-        filteredBook = books.filter((item) => item.number !== book.number )
-        console.log(filteredBook)
+        filterBook = books.filter((item) => item.number !== book.number) 
+        // filteredBook = books.filter((item) => item.number !== book.number )
+        console.log(filterBook)
     }
 
     bookFiltered();
@@ -46,8 +46,8 @@ export default function Popular() {
 
                 <Container>
                     <Row xs={12} md={4}>
-                        { filteredBook.map((list) => (
-                            <Link to={`/Populars/${list.number}`} key={list.number} className="links">
+                        { filterBook.map((list) => (
+                            <NavLink to={`/Populars/${list.number}`} key={list.number} className="links">
                             <Col  >
                         <Card style={{ width: '16rem' }}>
                             <Card.Img variant="top" src={book.image} style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
@@ -59,7 +59,7 @@ export default function Popular() {
                             </Card.Body>
                         </Card>
                     </Col>
-              </Link>
+              </NavLink>
 
 
                         ))
