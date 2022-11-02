@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom';
 
 
 export default function Popular() {
-
+    // console.log("loveeee", books)
     const [books, setBooks] = useState([])
 
     // let books = getBooks();
@@ -24,10 +24,8 @@ export default function Popular() {
 
         )
 
-
         const { data } = response;
         setBooks(data)
-        console.log("hihiiiiii", setBooks)
 
         // setBooks(data.response.books)
 
@@ -48,6 +46,7 @@ export default function Popular() {
                         <Col >
                             <Card style={{ width: '16rem' }}>
                                 <Card.Img variant="top" src={imageUrl + books.image} crossOrigin='anonymous' style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
+                                {console.log("mammamma", books)}
                                 <Card.Body>
                                     <Card.Text className='text-title'><p>Uploaded By:</p> {books.username}</Card.Text>
                                     <Card.Text className='text-title'><p>Name Of Author:</p>{books.author} </Card.Text>

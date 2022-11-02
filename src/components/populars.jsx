@@ -24,7 +24,6 @@ export default function Populars() {
         // console.log("my books", data.books)
         //       console.log( data)
         setBooks(data)
-        console.log("hihiiiiii", setBooks)
 
         // setBooks(data.response.books)
 
@@ -35,14 +34,6 @@ export default function Populars() {
     }, [])
 
     const imageUrl = 'http://localhost:8595/images/'
-    // books.map(item => {
-    //     console.log("nanann", item.image)
-    //     // item.image[0]
-
-    // })
-
-
-
 
 
     return (
