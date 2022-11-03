@@ -18,16 +18,6 @@ export default function Books() {
         setImage(e.target.files[0])
     }
 
-    // const handleClick = () => {
-    //     // 👇️ clear input value
-    //     setUsername('');
-    //     setAuthor('');
-    //     setTitle('');
-    //     setCategory('');
-    //     setDescription('');
-    //     setPrice('');
-    //     setImage('');
-    // };
 
     const addBook = async (e) => {
         try {

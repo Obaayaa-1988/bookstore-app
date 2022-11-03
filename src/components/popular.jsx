@@ -12,8 +12,11 @@ import { NavLink } from 'react-router-dom';
 
 
 export default function Popular() {
-    // console.log("loveeee", books)
+
     const [books, setBooks] = useState([])
+
+    // let params = useParams();
+    // let bookses = setBooks(parseInt(params.bookId, 10));
 
     // let books = getBooks();
     const fetchBooks = async () => {
@@ -37,6 +40,16 @@ export default function Popular() {
 
     const imageUrl = 'http://localhost:8595/images/'
 
+    // let filteredBook = []
+
+    // const bookFiltered = () => {
+    //     const filteredBook = books.filter((item) => item.id !== item.id)
+        
+    //     console.log("yeshhshhs", filteredBook)
+
+    // }
+
+    // bookFiltered();
 
     return (
         <div>
@@ -46,7 +59,7 @@ export default function Popular() {
                         <Col >
                             <Card style={{ width: '16rem' }}>
                                 <Card.Img variant="top" src={imageUrl + books.image} crossOrigin='anonymous' style={{ height: "15rem", objectFit: "cover", objectPosition: "50% 50%" }} />
-                                {console.log("mammamma", books)}
+                                {/* {console.log("mammamma", books)} */}
                                 <Card.Body>
                                     <Card.Text className='text-title'><p>Uploaded By:</p> {books.username}</Card.Text>
                                     <Card.Text className='text-title'><p>Name Of Author:</p>{books.author} </Card.Text>
